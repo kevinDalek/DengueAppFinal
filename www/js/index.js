@@ -758,13 +758,10 @@ var longitude = position.coords.longitude;
 
                     });
         //set marker on user location
-                mymap.addControl(new mapboxgl.GeolocateControl({
-positionOptions: {
-enableHighAccuracy: true
-
-},
-trackUserLocation: true
-}));
+         //set marker on user location
+        var marker = new mapboxgl.Marker()
+          .setLngLat([longitude, latitude])
+          .addTo(mymap);
 
       //geojson for hospitals and healthcare centre stored in var  hospital
       var hospitals = {
