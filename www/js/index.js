@@ -2009,7 +2009,7 @@ var longitude = position.coords.longitude;
           var geocoder = new MapboxGeocoder({ // Initialize the geocoder
             accessToken: mapboxgl.accessToken, // Set the access token
             mapboxgl: mapboxgl,
-            placeholder:'      Search'
+            placeholder:'Search'
           });
 
           // Add the geocoder to the map
