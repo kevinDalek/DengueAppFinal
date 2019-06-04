@@ -589,6 +589,29 @@ function showSlides2() {
  showSlides2();
    
 /*******************END OF Slideshow Part*****************************/
+ /*******************Slideshow1 Part*****************************/
+var slideIndex3 = 0;
+
+
+function showSlides3() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides3");
+  var dots = document.getElementsByClassName("dot3");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex3++;
+  if (slideIndex3 > slides.length) {slideIndex3= 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex3-1].style.display = "block";  
+  dots[slideIndex3-1].className += " active";
+  setTimeout(showSlides3, 5000); // Change image every 2 seconds
+}
+ showSlides3();
+   
+/*******************END OF Slideshow Part*****************************/
 /*************AI************************/
  /****API PART**************/
 var accessToken = "092f1bbb4718446aa379920703e8b766",
@@ -2009,7 +2032,7 @@ var longitude = position.coords.longitude;
           var geocoder = new MapboxGeocoder({ // Initialize the geocoder
             accessToken: mapboxgl.accessToken, // Set the access token
             mapboxgl: mapboxgl,
-            placeholder:'Search'
+            placeholder:'        Search'
           });
 
           // Add the geocoder to the map
